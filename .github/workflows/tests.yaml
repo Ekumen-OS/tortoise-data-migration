@@ -1,0 +1,23 @@
+name: tests
+
+on:
+  pull_request:
+    paths-ignore:
+      - docs/**
+    branches-ignore:
+      - none
+
+  push:
+    branches: ["main"]
+    paths-ignore: ["docs/**"]
+
+jobs:
+  build-and-test:
+    name: make test
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout Code Repository
+        uses: actions/checkout@v2
+
+      - name: Run tests
+        run: make test

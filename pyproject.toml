@@ -1,0 +1,23 @@
+[project]
+name = "data-migration"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Guillermo Manzato", email = "manzato@ekumenlabs.com"},
+]
+dependencies = [
+    "tortoise-orm~=0.17",
+]
+requires-python = ">=3.8"
+dynamic = ["classifiers"]
+license = {text = "MIT"}
+
+[project.urls]
+homepage = ""
+
+[build-system]
+requires = ["pdm-pep517"]
+build-backend = "pdm.pep517.api"
+
+[tool]
+[tool.pdm]

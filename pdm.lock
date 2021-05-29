@@ -1,0 +1,75 @@
+[[package]]
+name = "aiosqlite"
+sections = ["default"]
+version = "0.16.1"
+summary = "asyncio bridge to the standard sqlite3 module"
+dependencies = [
+    "typing-extensions>=3.7.2",
+]
+
+[[package]]
+name = "iso8601"
+sections = ["default"]
+version = "0.1.14"
+summary = "Simple module to parse ISO 8601 dates"
+
+[[package]]
+name = "pypika-tortoise"
+sections = ["default"]
+version = "0.1.1"
+summary = "Forked from pypika and streamline just for tortoise-orm"
+
+[[package]]
+name = "pytz"
+sections = ["default"]
+version = "2021.1"
+summary = "World timezone definitions, modern and historical"
+
+[[package]]
+name = "tortoise-orm"
+sections = ["default"]
+version = "0.17.3"
+summary = "Easy async ORM for python, built with relations in mind"
+dependencies = [
+    "aiosqlite<0.17.0,>=0.16.0",
+    "iso8601<0.2.0,>=0.1.13",
+    "pypika-tortoise<0.2.0,>=0.1.1",
+    "pytz",
+]
+
+[[package]]
+name = "typing-extensions"
+sections = ["default"]
+version = "3.10.0.0"
+summary = "Backported and Experimental Type Hints for Python 3.5+"
+
+[metadata]
+lock_version = "2"
+content_hash = "sha256:44df94a10fd08037d30284078bb050d913988bb879d016a9ce1f0118d7918a98"
+
+[metadata.files]
+"aiosqlite 0.16.1" = [
+    {file = "aiosqlite-0.16.1-py3-none-any.whl", hash = "sha256:1df802815bb1e08a26c06d5ea9df589bcb8eec56e5f3378103b0f9b223c6703c"},
+    {file = "aiosqlite-0.16.1.tar.gz", hash = "sha256:2e915463164efa65b60fd1901aceca829b6090082f03082618afca6fb9c8fdf7"},
+]
+"iso8601 0.1.14" = [
+    {file = "iso8601-0.1.14-py2.py3-none-any.whl", hash = "sha256:e7e1122f064d626e17d47cd5106bed2c620cb38fe464999e0ddae2b6d2de6004"},
+    {file = "iso8601-0.1.14.tar.gz", hash = "sha256:8aafd56fa0290496c5edbb13c311f78fa3a241f0853540da09d9363eae3ebd79"},
+]
+"pypika-tortoise 0.1.1" = [
+    {file = "pypika_tortoise-0.1.1-py3-none-any.whl", hash = "sha256:860020094e01058ea80602c90d4a843d0a42cffefcf4f3cb1a7f2c18b880c638"},
+    {file = "pypika-tortoise-0.1.1.tar.gz", hash = "sha256:6831d0a56e5e0ecefac3307dd9bdb3e5073fdac5d617401601d3a6713e059f3c"},
+]
+"pytz 2021.1" = [
+    {file = "pytz-2021.1-py2.py3-none-any.whl", hash = "sha256:eb10ce3e7736052ed3623d49975ce333bcd712c7bb19a58b9e2089d4057d0798"},
+    {file = "pytz-2021.1.tar.gz", hash = "sha256:83a4a90894bf38e243cf052c8b58f381bfe9a7a483f6a9cab140bc7f702ac4da"},
+]
+"tortoise-orm 0.17.3" = [
+    {file = "tortoise_orm-0.17.3-py3-none-any.whl", hash = "sha256:99b448a870a81b6edb3ef9d2f0e22b2c83afa2b6348178840d3ccdbf03e206d3"},
+    {file = "tortoise-orm-0.17.3.tar.gz", hash = "sha256:6e5e56694b64118faaada2670343c909d6c9f84c7235f3372b8a398b2e8d6628"},
+]
+"typing-extensions 3.10.0.0" = [
+    {file = "typing_extensions-3.10.0.0-py2-none-any.whl", hash = "sha256:0ac0f89795dd19de6b97debb0c6af1c70987fd80a2d62d1958f7e56fcc31b497"},
+    {file = "typing_extensions-3.10.0.0-py3-none-any.whl", hash = "sha256:779383f6086d90c99ae41cf0ff39aac8a7937a9283ce0a414e5dd782f4c94a84"},
+    {file = "typing_extensions-3.10.0.0.tar.gz", hash = "sha256:50b6f157849174217d0656f99dc82fe932884fb250826c18350e159ec6cdf342"},
+]
