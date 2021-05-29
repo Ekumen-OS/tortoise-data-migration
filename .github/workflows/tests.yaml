@@ -12,12 +12,15 @@ on:
     paths-ignore: ["docs/**"]
 
 jobs:
-  build-and-test:
-    name: make test
+  test:
+    name: run tests
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout Code Repository
         uses: actions/checkout@v2
+
+      - name: Setup PDM
+        uses: pdm-project/setup-pdm@v2
 
       - name: Run tests
         run: make test
