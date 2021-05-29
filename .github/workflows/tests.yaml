@@ -22,5 +22,8 @@ jobs:
       - name: Setup PDM
         uses: pdm-project/setup-pdm@v2
 
+      - name: Install dependencies
+        run: make install-dependencies
+
       - name: Run tests
         run: make test
