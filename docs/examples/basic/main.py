@@ -1,7 +1,13 @@
+import logging
+
 from app.models import Country
 from tortoise import Tortoise, run_async
 
 from tortoise_data_migration import upgrade
+
+logging.basicConfig(level=logging.INFO)
+
+logger = logging.getLogger(__name__)
 
 config = {
     "connections": {"default": "sqlite:///tmp/test.sqlite3"},
@@ -15,15 +21,16 @@ config = {
 
 
 async def init():
+    logger.info("Starting app")
     await Tortoise.init(config=config)
 
     await Tortoise.generate_schemas()
 
     await upgrade()
 
-    print("Available countries:")
+    logger.info("Available countries:")
     for country in await Country.all():
-        print(f" - {country.code} | {country.name}")
+        logger.info(f" - {country.code} | {country.name}")
 
 
 if __name__ == "__main__":
