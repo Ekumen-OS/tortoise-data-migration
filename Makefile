@@ -5,3 +5,6 @@ install-dependencies:
 
 test:
 	pdm run python -m unittest
+
+build:
+	pdm build
