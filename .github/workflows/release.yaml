@@ -1,0 +1,32 @@
+name: Release
+
+on:
+ release:
+    types:
+      - created
+
+jobs:
+  release-pypi:
+    name: release-pypi
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup PDM
+        uses: pdm-project/setup-pdm@v2
+
+      - name: Install dependencies
+        run: make install-dependencies
+
+      - name: Run tests
+        run: make test
+
+      - name: Make build
+        run: make build
+
+      - name: Upload to Pypi
+        run: |
+          pip install twine
+          twine upload --username __token__ --password ${{ secrets.PYPI_API_TOKEN }} dist/*
