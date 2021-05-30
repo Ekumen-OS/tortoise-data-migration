@@ -1,6 +1,6 @@
 [project]
 name = "tortoise-data-migration"
-version = "0.1.2"
+version = "0.1.4"
 description = "Tortoise migrations for data, not structure"
 authors = [
     {name = "Guillermo Manzato", email = "manzato@ekumenlabs.com"},
