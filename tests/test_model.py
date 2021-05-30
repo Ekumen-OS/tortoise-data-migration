@@ -1,6 +1,6 @@
 import unittest
 
-from data_migration import DataMigration
+from tortoise_data_migration import DataMigration
 
 
 class ModelTestCase(unittest.TestCase):

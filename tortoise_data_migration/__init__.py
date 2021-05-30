@@ -6,7 +6,7 @@ import typing
 
 from tortoise.transactions import in_transaction
 
-from data_migration.models import DataMigration
+from tortoise_data_migration.models import DataMigration
 
 logger = logging.getLogger(__name__)
 
@@ -62,7 +62,9 @@ async def get_pending_migrations(dir_name: str) -> typing.List[Migration]:
     return pending_migrations
 
 
-async def upgrade(base_package: str, connection_name: str = "default") -> bool:
+async def upgrade(
+    base_package: str = "data_migrations", connection_name: str = "default"
+) -> bool:
     """Atomically applies all the pending data migrations available. Returns
     True if migrations were applied. False if there was nothing to do.
     Exceptions raised while applying the migrations are to be handled by the
