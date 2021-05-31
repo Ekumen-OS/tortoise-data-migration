@@ -22,7 +22,7 @@ jobs:
       - name: Setup PDM
         uses: pdm-project/setup-pdm@v2
         with:
-          version: 1.4.0
+          version: 1.5.2
 
       - name: Install dependencies
         run: make install-dependencies
