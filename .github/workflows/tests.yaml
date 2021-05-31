@@ -3,13 +3,13 @@ name: tests
 on:
   pull_request:
     paths-ignore:
-      - docs/**
-    branches-ignore:
-      - none
+      docs/**
 
   push:
-    branches: ["main"]
-    paths-ignore: ["docs/**"]
+    branches:
+      main
+    paths-ignore:
+      docs/**
 
 jobs:
   test:
@@ -21,6 +21,8 @@ jobs:
 
       - name: Setup PDM
         uses: pdm-project/setup-pdm@v2
+        with:
+          version: 1.4.0
 
       - name: Install dependencies
         run: make install-dependencies
