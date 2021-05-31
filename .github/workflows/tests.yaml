@@ -3,13 +3,13 @@ name: tests
 on:
   pull_request:
     paths-ignore:
-      docs/**
+      - "docs/**"
 
   push:
     branches:
-      main
+      - "main"
     paths-ignore:
-      docs/**
+      - "docs/**"
 
 jobs:
   test:
