@@ -28,4 +28,4 @@ build-backend = "pdm.pep517.api"
 [tool.pdm]
 
 [flake8]
-max-line-length = 88 # Compatible with black
+max-line-length = 88
