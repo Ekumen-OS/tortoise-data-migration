@@ -21,3 +21,12 @@ tortoise-data-migrations are meant to be executed by the software (either during
 database structure is up-to-date (in production software after running [aerich](https://github.com/tortoise/aerich) migrations for example
 or during tests after the DB setup is done), but before the actual software starts executing. That's why
 `tortoise-data-migration` is a library and not a command line tool.
+
+
+
+## Notes for maintainers
+
+### Release
+
+To create a new release, create a github release and a github action will take care of building and publishing. After
+that, the version in `main` should be bumped to the next release.
