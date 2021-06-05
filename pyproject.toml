@@ -1,12 +1,18 @@
 [project]
 name = "tortoise-data-migration"
-version = "0.1.5"
+version = "0.1.6"
 description = "Tortoise migrations for data, not structure"
 authors = [
     {name = "Guillermo Manzato", email = "manzato@ekumenlabs.com"},
 ]
 classifiers = [
     "Development Status :: 4 - Beta",
+    "Framework :: AsyncIO",
+    "Intended Audience :: Developers",
+    "Topic :: Database",
+    "License :: OSI Approved :: MIT License",
+
+
 ]
 dependencies = [
     "tortoise-orm~=0.17",
@@ -14,6 +20,7 @@ dependencies = [
 requires-python = ">=3.8"
 dynamic = ["classifiers"]
 license = {text = "MIT"}
+readme = "README.md"
 
 [project.urls]
 homepage = "https://github.com/ekumenlabs/tortoise-data-migration"
