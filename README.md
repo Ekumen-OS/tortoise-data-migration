@@ -23,6 +23,19 @@ or during tests after the DB setup is done), but before the actual software star
 `tortoise-data-migration` is a library and not a command line tool.
 
 
+## Installation
+
+### Pip
+
+`pip install tortoise-data-migration`
+
+### Pipenv
+
+`pipenv install tortoise-data-migration`
+
+### PDM
+
+`pdm add tortoise-data-migration`
 
 ## Notes for maintainers
 
