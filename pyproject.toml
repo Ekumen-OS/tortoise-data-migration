@@ -14,6 +14,7 @@ dependencies = [
 requires-python = ">=3.8"
 dynamic = ["classifiers"]
 license = {text = "MIT"}
+readme = "README.md"
 
 [project.urls]
 homepage = "https://github.com/ekumenlabs/tortoise-data-migration"
