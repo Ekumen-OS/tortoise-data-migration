@@ -7,6 +7,12 @@ authors = [
 ]
 classifiers = [
     "Development Status :: 4 - Beta",
+    "Framework :: AsyncIO",
+    "Intended Audience :: Developers",
+    "Topic :: Database",
+    "License :: OSI Approved :: MIT License",
+
+
 ]
 dependencies = [
     "tortoise-orm~=0.17",
