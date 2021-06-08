@@ -34,5 +34,10 @@ build-backend = "pdm.pep517.api"
 [tool]
 [tool.pdm]
 
+[tool.pdm.dev-dependencies]
+dev = [
+    "coverage~=5.5",
+]
+
 [flake8]
 max-line-length = 88

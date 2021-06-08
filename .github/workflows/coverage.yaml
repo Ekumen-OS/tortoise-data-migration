@@ -1,0 +1,41 @@
+name: coverage
+
+on:
+  pull_request:
+    paths-ignore:
+      - "docs/**"
+
+  push:
+    branches:
+      - "main"
+    paths-ignore:
+      - "docs/**"
+
+jobs:
+  test:
+    name: coverage
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code Repository
+        uses: actions/checkout@v2
+
+      - name: Setup PDM
+        uses: pdm-project/setup-pdm@v2
+        with:
+          version: 1.5.2
+
+      - name: Install dependencies
+        run: make install-dependencies
+
+      - name: Run coverage
+        run: make coverage
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          files: ./coverage.xml
+          flags: unittests
+          env_vars: OS,PYTHON
+          fail_ci_if_error: true
+          verbose: true
