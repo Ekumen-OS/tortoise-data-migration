@@ -23,9 +23,9 @@ license = {text = "MIT"}
 readme = "README.md"
 
 [project.urls]
-homepage = "https://github.com/ekumenlabs/tortoise-data-migration"
-Repository = "https://github.com/ekumenlabs/tortoise-data-migration"
-Documentation = "https://github.com/ekumenlabs/tortoise-data-migration"
+homepage = "https://github.com/Ekumen-OS/tortoise-data-migration"
+Repository = "https://github.com/Ekumen-OS/tortoise-data-migration"
+Documentation = "https://github.com/Ekumen-OS/tortoise-data-migration"
 
 [build-system]
 requires = ["pdm-pep517"]
