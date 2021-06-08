@@ -1,6 +1,7 @@
 # tortoise-data-migration
 
 [![tests](https://github.com/Ekumen-OS/tortoise-data-migration/actions/workflows/tests.yaml/badge.svg)](https://github.com/Ekumen-OS/tortoise-data-migration/actions/workflows/tests.yaml)
+[![codecov](https://codecov.io/gh/Ekumen-OS/tortoise-data-migration/branch/main/graph/badge.svg?token=P92AYYHAR1)](https://codecov.io/gh/Ekumen-OS/tortoise-data-migration)
 [![black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![pdm-managed](https://img.shields.io/badge/pdm-managed-blueviolet)](https://pdm.fming.dev)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/tortoise-data-migration)
