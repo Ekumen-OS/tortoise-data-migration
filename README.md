@@ -6,7 +6,8 @@
 [![pdm-managed](https://img.shields.io/badge/pdm-managed-blueviolet)](https://pdm.fming.dev)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/tortoise-data-migration)
 ![PyPI - Wheel](https://img.shields.io/pypi/wheel/tortoise-data-migration)
-![PyPI](https://img.shields.io/pypi/v/tortoise-data-migration?logo=python)
+[![PyPI](https://img.shields.io/pypi/v/tortoise-data-migration?logo=python)](https://pypi.org/project/tortoise-data-migration/)
+
 
 `tortoise-data-migration` is a very simple project meant to perform migrations of data, similar to regular structural migrations.
 
