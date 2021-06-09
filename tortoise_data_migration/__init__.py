@@ -6,6 +6,7 @@ import typing
 
 from tortoise.transactions import in_transaction
 
+from tortoise_data_migration.exception import UpgradeMigrationError
 from tortoise_data_migration.models import DataMigration
 
 logger = logging.getLogger(__name__)
@@ -31,28 +32,29 @@ class Migration:
         await DataMigration.create(name=self.name)
 
     def __repr__(self):
-        return f"Migration(name={self.__name}"
+        return f"Migration(name={self.__name})"
 
 
-def get_available_migrations(dir_name: str) -> typing.List[Migration]:
+def get_available_migrations(base_package: str) -> typing.List[Migration]:
     """Returns a list of available migrations (already applied or not)"""
+
+    dir_name = base_package.replace(".", "/")
     migrations = []
     for file_name in os.listdir(dir_name):
         match = re.search(r"(\d+_.*)\.py$", file_name)
         if not match:
             continue
 
-        package_name = dir_name.replace("/", ".")
-        migration = Migration(name=match.group(1), package=package_name)
+        migration = Migration(name=match.group(1), package=base_package)
         migrations.append(migration)
         logger.debug(f"Found migration {migration.module_name}")
     return migrations
 
 
-async def get_pending_migrations(dir_name: str) -> typing.List[Migration]:
+async def get_pending_migrations(base_package: str) -> typing.List[Migration]:
     """Returns a list of pending migrations"""
     pending_migrations = []
-    for migration in get_available_migrations(dir_name):
+    for migration in get_available_migrations(base_package):
         if await DataMigration.exists(name=migration.name):
             logger.debug(f"Migration {migration.name} already applied")
         else:
@@ -79,7 +81,11 @@ async def upgrade(
     async with in_transaction(connection_name=connection_name):
         for migration in migrations:
             logger.debug(f"Applying migration {migration.name}")
-            await migration.upgrade()
+            try:
+                await migration.upgrade()
+            except Exception as e:
+                logger.exception(f"Failed to apply {migration.name}")
+                raise UpgradeMigrationError() from e
             logger.debug(f"Migration {migration.name} successfully applied!")
 
         logger.debug(f"Successfully applied migrations: {len(migrations)}")
