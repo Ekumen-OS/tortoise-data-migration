@@ -32,7 +32,7 @@ class Migration:
         await DataMigration.create(name=self.name)
 
     def __repr__(self):
-        return f"Migration(name={self.__name})"
+        return f"Migration(name={self.__name}, package={self.__package})"
 
 
 def get_available_migrations(base_package: str) -> typing.List[Migration]:
@@ -56,9 +56,9 @@ async def get_pending_migrations(base_package: str) -> typing.List[Migration]:
     pending_migrations = []
     for migration in get_available_migrations(base_package):
         if await DataMigration.exists(name=migration.name):
-            logger.debug(f"Migration {migration.name} already applied")
+            logger.debug(f"Migration {migration} already applied")
         else:
-            logger.debug(f"Migration {migration.name} needs to be applied")
+            logger.info(f"Migration {migration} needs to be applied")
             pending_migrations.append(migration)
 
     return pending_migrations
@@ -68,9 +68,9 @@ async def upgrade(
     base_package: str = "data_migrations", connection_name: str = "default"
 ) -> bool:
     """Atomically applies all the pending data migrations available. Returns
-    True if migrations were applied. False if there was nothing to do.
-    Exceptions raised while applying the migrations are to be handled by the
-    caller"""
+    True if migrations were applied. False if there was nothing to do. If
+    there is an exception running a migration, UpgradeMigrationError is
+    raised and should be handled by the caller"""
 
     migrations = await get_pending_migrations(base_package)
 
@@ -80,11 +80,11 @@ async def upgrade(
 
     async with in_transaction(connection_name=connection_name):
         for migration in migrations:
-            logger.debug(f"Applying migration {migration.name}")
+            logger.debug(f"Applying {migration}")
             try:
                 await migration.upgrade()
             except Exception as e:
-                logger.exception(f"Failed to apply {migration.name}")
+                logger.exception(f"Failed to apply {migration}")
                 raise UpgradeMigrationError() from e
             logger.debug(f"Migration {migration.name} successfully applied!")
 
