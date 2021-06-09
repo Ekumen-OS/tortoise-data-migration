@@ -23,6 +23,6 @@ class BasicTestCase(unittest.IsolatedAsyncioTestCase):
         await Tortoise.generate_schemas(safe=True)
 
     async def asyncTearDown(self) -> None:
-        await Tortoise.close_connections()
-
         await super().asyncTearDown()
+
+        await Tortoise.close_connections()
