@@ -14,7 +14,3 @@ class ModelTestCase(unittest.TestCase):
         migration = DataMigration(id=4, name=name)
         self.assertEqual(migration.id, 4)
         self.assertEqual(migration.name, name)
-
-
-if __name__ == "__main__":
-    unittest.main()
