@@ -12,3 +12,4 @@ build:
 coverage:
 	pdm run coverage run --source tortoise_data_migration --module unittest discover
 	pdm run coverage xml
+	pdm run coverage report
