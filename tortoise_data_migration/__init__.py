@@ -1,4 +1,4 @@
-import importlib.util
+import importlib
 import logging
 import os
 import re
@@ -38,9 +38,11 @@ class Migration:
 def get_available_migrations(base_package: str) -> typing.List[Migration]:
     """Returns a list of available migrations (already applied or not)"""
 
-    dir_name = base_package.replace(".", "/")
+    logger.debug(f"Looking for available migrations within {base_package}")
     migrations = []
-    for file_name in os.listdir(dir_name):
+    base_module = importlib.import_module(base_package)
+    path = base_module.__path__[0]  # type: ignore  # mypy issue #1422
+    for file_name in os.listdir(path):
         match = re.search(r"(\d+_.*)\.py$", file_name)
         if not match:
             continue

@@ -1,3 +1,4 @@
+import logging
 import unittest
 
 from tortoise import Tortoise
@@ -17,6 +18,8 @@ class BasicTestCase(unittest.IsolatedAsyncioTestCase):
 
     async def asyncSetUp(self) -> None:
         await super().asyncSetUp()
+
+        logging.basicConfig(level=logging.DEBUG)
 
         await Tortoise.init(config=self.config)
 
