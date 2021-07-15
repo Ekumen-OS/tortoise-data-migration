@@ -50,7 +50,7 @@ def get_available_migrations(base_package: str) -> typing.List[Migration]:
         migration = Migration(name=match.group(1), package=base_package)
         migrations.append(migration)
         logger.debug(f"Found migration {migration.module_name}")
-    return sorted(migrations, key=lambda m: m.module_name) 
+    return sorted(migrations, key=lambda m: m.module_name)
 
 
 async def get_pending_migrations(base_package: str) -> typing.List[Migration]:
