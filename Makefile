@@ -6,6 +6,10 @@ install-dependencies:
 test:
 	pdm run python -m unittest
 
+test-watch:
+	find . -name \*.py | entr pdm run python -m unittest -k tests
+
+
 build:
 	pdm build
 
