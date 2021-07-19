@@ -2,23 +2,28 @@
 name = ""
 version = ""
 description = ""
-authors = [
-    {name = "Guillermo Manzato", email = "manzato@ekumenlabs.com"},
-]
-dependencies = [
-    "tortoise-data-migration~=0.1",
-    "tortoise-orm~=0.17",
-]
-requires-python = ">=3.8"
 dynamic = ["classifiers"]
 license = {text = "MIT"}
 
 [project.urls]
 homepage = ""
 
-[build-system]
-requires = ["pdm-pep517"]
-build-backend = "pdm.pep517.api"
-
 [tool]
 [tool.pdm]
+
+[tool.poetry]
+name = "basic"
+version = "0.1.0"
+description = ""
+authors = ["Guillermo Manzato <manzato@ekumenlabs.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+tortoise-orm = "^0.17.5"
+tortoise-data-migration = "^0.1.11"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
