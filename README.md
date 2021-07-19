@@ -3,7 +3,7 @@
 [![tests](https://github.com/Ekumen-OS/tortoise-data-migration/actions/workflows/tests.yaml/badge.svg)](https://github.com/Ekumen-OS/tortoise-data-migration/actions/workflows/tests.yaml)
 [![codecov](https://codecov.io/gh/Ekumen-OS/tortoise-data-migration/branch/main/graph/badge.svg?token=P92AYYHAR1)](https://codecov.io/gh/Ekumen-OS/tortoise-data-migration)
 [![black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-[![pdm-managed](https://img.shields.io/badge/pdm-managed-blueviolet)](https://pdm.fming.dev)
+[![poetry-managed](https://img.shields.io/badge/poetry-managed-blueviolet)](https://python-poetry.org)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/tortoise-data-migration)
 ![PyPI - Wheel](https://img.shields.io/pypi/wheel/tortoise-data-migration)
 [![PyPI](https://img.shields.io/pypi/v/tortoise-data-migration?logo=python)](https://pypi.org/project/tortoise-data-migration/)
@@ -34,6 +34,10 @@ or during tests after the DB setup is done), but before the actual software star
 ### Pipenv
 
 `pipenv install tortoise-data-migration`
+
+### Poetry
+
+`poetry add tortoise-data-migration`
 
 ### PDM
 

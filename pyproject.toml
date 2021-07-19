@@ -27,17 +27,24 @@ homepage = "https://github.com/Ekumen-OS/tortoise-data-migration"
 Repository = "https://github.com/Ekumen-OS/tortoise-data-migration"
 Documentation = "https://github.com/Ekumen-OS/tortoise-data-migration"
 
-[build-system]
-requires = ["pdm-pep517"]
-build-backend = "pdm.pep517.api"
-
-[tool]
-[tool.pdm]
-
-[tool.pdm.dev-dependencies]
-dev = [
-    "coverage~=5.5",
-]
-
 [flake8]
 max-line-length = 88
+
+[tool.poetry]
+name = "tortoise-data-migration"
+version = "0.1.11"
+description = "Tortoise migrations for data, not structure"
+authors = ["Guillermo Manzato <manzato@ekumenlabs.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+tortoise-orm = "^0.17.5"
+
+[tool.poetry.dev-dependencies]
+coverage = "^5.5"
+pytest = "^6.2.4"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

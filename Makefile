@@ -1,19 +1,15 @@
 
-
-install-dependencies:
-	pdm install --no-lock
-
 test:
-	pdm run python -m unittest
+	poetry run python -m pytest tests/
 
 test-watch:
-	find . -name \*.py | entr pdm run python -m unittest -k tests
+	find . -name \*.py | entr poetry run python -m pytest -k tests
 
 
 build:
-	pdm build
+	poetry build
 
 coverage:
-	pdm run coverage run --source tortoise_data_migration --module unittest discover
-	pdm run coverage xml
-	pdm run coverage report
+	poetry run coverage run --source tortoise_data_migration --module pytest tests/
+	poetry run coverage xml
+	poetry run coverage report
