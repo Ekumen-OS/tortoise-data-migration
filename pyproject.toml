@@ -1,41 +1,30 @@
-[project]
+[tool.poetry]
 name = "tortoise-data-migration"
 version = "0.1.12"
 description = "Tortoise migrations for data, not structure"
 authors = [
-    {name = "Guillermo Manzato", email = "manzato@ekumenlabs.com"},
+    "Guillermo Manzato <manzato@ekumenlabs.com>"
 ]
+license = "MIT"
+readme = "README.md"
+
+homepage = "https://github.com/Ekumen-OS/tortoise-data-migration"
+repository = "https://github.com/Ekumen-OS/tortoise-data-migration"
+documentation = "https://github.com/Ekumen-OS/tortoise-data-migration"
+
+keywords = ["migrations", "tortoise", "data-migrations"]
+
 classifiers = [
     "Development Status :: 4 - Beta",
     "Framework :: AsyncIO",
     "Intended Audience :: Developers",
     "Topic :: Database",
     "License :: OSI Approved :: MIT License",
-
-
 ]
-dependencies = [
-    "tortoise-orm~=0.17",
-]
-requires-python = ">=3.8"
-dynamic = ["classifiers"]
-license = {text = "MIT"}
-readme = "README.md"
 
-[project.urls]
-homepage = "https://github.com/Ekumen-OS/tortoise-data-migration"
-Repository = "https://github.com/Ekumen-OS/tortoise-data-migration"
-Documentation = "https://github.com/Ekumen-OS/tortoise-data-migration"
 
 [flake8]
 max-line-length = 88
-
-[tool.poetry]
-name = "tortoise-data-migration"
-version = "0.1.12"
-description = "Tortoise migrations for data, not structure"
-authors = ["Guillermo Manzato <manzato@ekumenlabs.com>"]
-license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.8"
