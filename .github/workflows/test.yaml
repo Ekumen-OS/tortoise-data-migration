@@ -41,13 +41,13 @@ jobs:
 
       - name: Bump version
         run: |
-          CURRENT_VERSION=$(cat pyproject.toml | grep '^version\s*=' | awk '{print $3;}')
+          CURRENT_VERSION=`cat pyproject.toml | grep '^version\s*=\s*' | awk '{print $3;}'`
           NEW_VERSION=${versionbump --current ${CURRENT_VERSION} patch pyproject.toml)
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
-          token: ${{ secrets.PAT }}
+          token: ${{ secrets.REPO_TOKEN }}
           commit-message: Bump version to ${NEW_VERSION}
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           signoff: false
