@@ -51,7 +51,8 @@ jobs:
           commit-message: Bump version to ${NEW_VERSION}
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           signoff: false
-          branch: example-patches
+          base: main
+          branch: version-bump
           delete-branch: true
           title: 'Update main from ${CURRENT_VERSION} to ${NEW_VERSION}'
           body: |
