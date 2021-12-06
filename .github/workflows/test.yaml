@@ -47,7 +47,7 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
-          commit-message: Bump version to ${NEW_VERSION}
+          commit-message: Bump version to ${{NEW_VERSION}}
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           signoff: false
           base: main
