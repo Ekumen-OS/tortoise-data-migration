@@ -50,4 +50,4 @@ or during tests after the DB setup is done), but before the actual software star
 ### Release
 
 To create a new release, create a github release and a github action will take care of building and publishing. After
-that, the version in `main` should be bumped to the next release.
+that, there will be a PR automatically created to bump the version in `main`.
