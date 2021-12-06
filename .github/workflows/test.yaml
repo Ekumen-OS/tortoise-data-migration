@@ -41,7 +41,7 @@ jobs:
 
       - name: Bump version
         run: |
-          CURRENT_VERSION=$(cat pyproject.toml | grep '^version\s*=\s*' | awk '{print $NF}')
+          CURRENT_VERSION=$(cat pyproject.toml | grep '^version\s*=\s*' | awk '{print $NF}' | tr -d \")
           NEW_VERSION=$(poetry run versionbump --current ${CURRENT_VERSION} patch pyproject.toml)
 
       - name: Create Pull Request
