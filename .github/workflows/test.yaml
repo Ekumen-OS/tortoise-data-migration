@@ -47,7 +47,6 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
-          token: ${{ secrets.REPO_TOKEN }}
           commit-message: Bump version to ${NEW_VERSION}
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           signoff: false
