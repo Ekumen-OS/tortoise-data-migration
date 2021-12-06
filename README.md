@@ -9,7 +9,6 @@
 [![PyPI](https://img.shields.io/pypi/v/tortoise-data-migration?logo=python)](https://pypi.org/project/tortoise-data-migration/)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/Ekumen-OS/tortoise-data-migration.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Ekumen-OS/tortoise-data-migration/alerts/)
 [![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/Ekumen-OS/tortoise-data-migration.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Ekumen-OS/tortoise-data-migration/context:python)
-[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/Ekumen-OS/tortoise-data-migration.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Ekumen-OS/tortoise-data-migration/context:python)
 
 
 `tortoise-data-migration` is a very simple project meant to perform migrations of data, similar to regular structural migrations.
