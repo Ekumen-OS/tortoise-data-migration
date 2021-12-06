@@ -41,5 +41,5 @@ jobs:
 
       - name: Bump version
         run: |
-          CURRENT_VERSION=$(cat pyproject.toml | grep '^version\s*=' | awk '{print \$3;}')
+          CURRENT_VERSION=$(cat pyproject.toml | grep '^version\s*=' | awk '{print $3;}')
           echo ${CURRENT_VERSION}
