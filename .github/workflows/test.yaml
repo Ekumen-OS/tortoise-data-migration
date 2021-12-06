@@ -47,13 +47,13 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
-          commit-message: Bump version to ${{ env.NEW_VERSION }}
+          commit-message: Bump version
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           signoff: false
           base: main
           branch: version-bump
           delete-branch: true
-          title: 'Update main from ${{ env.CURRENT_VERSION }} to ${{ env.NEW_VERSION }}'
+          title: 'Update version in main branch'
           body: |
             Update report
             - Updated pyproject.toml with new version
@@ -62,7 +62,7 @@ jobs:
             [1]: https://github.com/peter-evans/create-pull-request
           labels: |
             automated pr
-          assignees: manzato
+          assignees: ${{ github.actor }}
           team-reviewers: |
             owners
             maintainers
