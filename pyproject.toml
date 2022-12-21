@@ -2,9 +2,7 @@
 name = "tortoise-data-migration"
 version = "1.0.1"
 description = "Tortoise migrations for data, not structure"
-authors = [
-    "Guillermo Manzato <manzato@ekumenlabs.com>"
-]
+authors = ["Guillermo Manzato <manzato@ekumenlabs.com>"]
 license = "MIT"
 readme = "README.md"
 
@@ -14,13 +12,7 @@ documentation = "https://github.com/Ekumen-OS/tortoise-data-migration"
 
 keywords = ["migrations", "tortoise", "data-migrations"]
 
-classifiers = [
-    "Development Status :: 4 - Beta",
-    "Framework :: AsyncIO",
-    "Intended Audience :: Developers",
-    "Topic :: Database",
-    "License :: OSI Approved :: MIT License",
-]
+classifiers = [ "Development Status :: 4 - Beta", "Framework :: AsyncIO", "Intended Audience :: Developers", "Topic :: Database", "License :: OSI Approved :: MIT License"]
 
 
 [flake8]
