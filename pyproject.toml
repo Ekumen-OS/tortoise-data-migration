@@ -2,9 +2,7 @@
 name = "tortoise-data-migration"
 version = "1.0.1"
 description = "Tortoise migrations for data, not structure"
-authors = [
-    "Guillermo Manzato <manzato@ekumenlabs.com>"
-]
+authors = ["Guillermo Manzato <manzato@ekumenlabs.com>"]
 license = "MIT"
 readme = "README.md"
 
