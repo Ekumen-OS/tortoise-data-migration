@@ -12,13 +12,7 @@ documentation = "https://github.com/Ekumen-OS/tortoise-data-migration"
 
 keywords = ["migrations", "tortoise", "data-migrations"]
 
-classifiers = [
-    "Development Status :: 4 - Beta",
-    "Framework :: AsyncIO",
-    "Intended Audience :: Developers",
-    "Topic :: Database",
-    "License :: OSI Approved :: MIT License",
-]
+classifiers = [ "Development Status :: 4 - Beta", "Framework :: AsyncIO", "Intended Audience :: Developers", "Topic :: Database", "License :: OSI Approved :: MIT License"]
 
 
 [flake8]
