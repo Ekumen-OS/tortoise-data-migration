@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "tortoise-data-migration"
-version = "1.0.1"
+version = "1.0.2"
 description = "Tortoise migrations for data, not structure"
 authors = ["Guillermo Manzato <manzato@ekumenlabs.com>"]
 license = "MIT"
