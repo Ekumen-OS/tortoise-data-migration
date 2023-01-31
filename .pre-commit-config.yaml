@@ -22,7 +22,7 @@ repos:
       - id: black
 
   - repo: https://github.com/timothycrosley/isort
-    rev: v5.11.3
+    rev: 5.12.0
     hooks:
       - id: isort
         args: ["--profile", "black"]
@@ -36,7 +36,7 @@ repos:
         additional_dependencies: [flake8-isort]
 
   - repo: https://github.com/pre-commit/pygrep-hooks
-    rev: v1.9.0
+    rev: v1.10.0
     hooks:
       - id: python-check-blanket-noqa
       - id: python-no-eval
