@@ -20,7 +20,7 @@ max-line-length = 88
 
 [tool.poetry.dependencies]
 python = "^3.8"
-tortoise-orm = ">=0.17.5,<0.20"
+tortoise-orm = ">=0.17.5,<0.21"
 
 [tool.poetry.dev-dependencies]
 coverage = "^7.2"
