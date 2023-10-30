@@ -24,7 +24,7 @@ tortoise-orm = ">=0.17.5,<0.21"
 
 [tool.poetry.dev-dependencies]
 coverage = "^7.3"
-pytest = "^7.4.2"
+pytest = "^7.4.3"
 versionbump = "^1.1.1"
 
 [build-system]
