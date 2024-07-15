@@ -23,7 +23,7 @@ python = "^3.8"
 tortoise-orm = ">=0.17.5,<0.22"
 
 [tool.poetry.dev-dependencies]
-coverage = "^7.5"
+coverage = "^7.6"
 pytest = "^8.2.2"
 versionbump = "^1.1.1"
 
