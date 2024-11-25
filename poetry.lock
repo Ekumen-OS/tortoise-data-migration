@@ -297,13 +297,13 @@ typing-extensions = ">=4.6.0,<4.7.0 || >4.7.0"
 
 [[package]]
 name = "pypika-tortoise"
-version = "0.2.1"
+version = "0.3.0"
 description = "Forked from pypika and streamline just for tortoise-orm"
 optional = false
-python-versions = "<4.0,>=3.7"
+python-versions = "<4.0,>=3.8"
 files = [
-    {file = "pypika_tortoise-0.2.1-py3-none-any.whl", hash = "sha256:e91a1c5a78c6753ead1a9ba1aa169a1f1282c5035170e5462f0073564bc18886"},
-    {file = "pypika_tortoise-0.2.1.tar.gz", hash = "sha256:979bbb9d60fe9f6e4129a25c44ee008aab4a4e97b296350be9983dcaa2766354"},
+    {file = "pypika_tortoise-0.3.0-py3-none-any.whl", hash = "sha256:c374a09591cdb24828d1c28bd0dfcfa2916094f4d3561a65c965b2549aa7c52f"},
+    {file = "pypika_tortoise-0.3.0.tar.gz", hash = "sha256:9bfb796e15ff8b395355ff42d9c4a4146fd716d3cbf9679391ac3a1c06d0e56a"},
 ]
 
 [[package]]
@@ -352,20 +352,20 @@ files = [
 
 [[package]]
 name = "tortoise-orm"
-version = "0.21.7"
+version = "0.22.1"
 description = "Easy async ORM for python, built with relations in mind"
 optional = false
 python-versions = "<4.0,>=3.8"
 files = [
-    {file = "tortoise_orm-0.21.7-py3-none-any.whl", hash = "sha256:2229925885461f424673223ea1875bd5e6961384c766833af55a1ea11a9b25eb"},
-    {file = "tortoise_orm-0.21.7.tar.gz", hash = "sha256:8a790a931828aa37ac364b344c561e603422aced2af5e403f6790575da0f19c5"},
+    {file = "tortoise_orm-0.22.1-py3-none-any.whl", hash = "sha256:96b8dbc10956cb5cfb6f02841b238035924a6011b5a9737774a22859e1b7bcbf"},
+    {file = "tortoise_orm-0.22.1.tar.gz", hash = "sha256:50cce7ab3eee5321553810ee31f411abde7a1806312655a377801c91e1b2cb77"},
 ]
 
 [package.dependencies]
 aiosqlite = ">=0.16.0,<0.21.0"
 iso8601 = ">=2.1.0,<3.0.0"
 pydantic = ">=2.0,<2.7.0 || >2.7.0,<3.0"
-pypika-tortoise = ">=0.2.1,<0.3.0"
+pypika-tortoise = ">=0.3.0,<0.4.0"
 pytz = "*"
 
 [package.extras]
@@ -400,4 +400,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8"
-content-hash = "0980213bb8e14f937d2643d9703fb9edb6ce8ccdc7032b6b0ad27be11fe6fc2a"
+content-hash = "994727fa16c0c3207eab88167822928cf7c23dde798196dac4683f194978d070"
